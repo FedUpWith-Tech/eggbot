@@ -25,7 +25,7 @@ export const data = new SlashCommandBuilder()
 export async function execute(interaction: ChatInputCommandInteraction) {
   await interaction.deferReply({ ephemeral: true });
   let emoji = interaction.options.getString('emoji')!;
-  if (emoji.length > 1) {
+  if (emoji.length > 3) {
     const emojiArray = emoji.split(':', 3);
     // eslint-disable-next-line no-param-reassign
     emoji = emojiArray[2].substr(0, 18);

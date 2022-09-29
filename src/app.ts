@@ -58,6 +58,30 @@ client.on('messageCreate', async (message: Message) => {
     if (!response) return;
     message.reply({ content: response });
   });
+
+  /* Memes */
+  if (message.content.toLowerCase().includes("haha") && message.content.toLowerCase().includes("egg")) {
+    await message.react('1024853189289312256');
+  }
+
+  if (message.content === '.bonk') {
+    await message.channel.send('https://boilercraft.com/bonk.gif');
+    await message.delete();
+  }
+
+  if (message.content.toLowerCase().includes("honey") && message.content.toLowerCase().includes("baked") && message.content.toLowerCase().includes("ham")) {
+    await message.react('🍯');
+    await message.react('🔥');
+    await message.react('🍖');
+  }
+
+  if (message.content.endsWith("?") &&  message.mentions.has(client.user!) ) {
+    let botReply = ["It is certain.", "It is decidedly so.", "Without a doubt.", "Yes, Definitely", "You may rely on it.", "As I see it, Yes.", "Most likely.", "Outlook Good.", "Yes.","Signs point to yes.","Reply hazy, try again.","Ask again later.","Better not tell you now.","Cannot predict now.",,"Concentrate and ask again.","Don't count on it.","My reply is no.","My sources say no.","Outlook not so good.","Very doubtful."]
+
+    let index = Math.floor(Math.random () * 19);
+    await message.reply({ content: botReply[index] });
+  }
+
 });
 
 client.on('guildMemberAdd', async (member) => {
