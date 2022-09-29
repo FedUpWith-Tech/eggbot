@@ -35,7 +35,7 @@ interface ReactionMessages {
   }
 }
 
-const reactionmessage: ReactionMessages = safeLoad('reactionmessages.json', './data/', {})! as ReactionMessages;
+let reactionmessage: ReactionMessages = safeLoad('reactionmessages.json', './data/', {})! as ReactionMessages;
 
 /**
  * Function to give users a role if they react to a saved reaction message
@@ -106,7 +106,7 @@ export async function addReactionMessage(
   const chan = await getGuild().channels.cache.get(MIDArray[5])! as TextChannel;
   const msg = await chan.messages.fetch(MIDArray[6]);
 
-  if (Object.prototype.hasOwnProperty.call(reactionmessage, MID[6])) {
+  if (Object.prototype.hasOwnProperty.call(reactionmessage, MIDArray[6])) {
     reactionmessage[MIDArray[6]].EMOJIS.push(emoji);
     reactionmessage[MIDArray[6]].ROLES.push(role.id);
     await msg.react(emoji);
