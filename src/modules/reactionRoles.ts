@@ -35,7 +35,7 @@ interface ReactionMessages {
   }
 }
 
-const reactionmessage: ReactionMessages = safeLoad('reactionmessages.json', './data/', {})! as ReactionMessages;
+let reactionmessage: ReactionMessages = safeLoad('reactionmessages.json', './data/', {})! as ReactionMessages;
 
 /**
  * Function to give users a role if they react to a saved reaction message
