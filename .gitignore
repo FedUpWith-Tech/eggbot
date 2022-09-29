@@ -1,0 +1,12 @@
+/.idea/
+
+/node_modules/
+
+.env
+
+/out/
+
+/dist/
+/backups/
+/config.json
+/data/

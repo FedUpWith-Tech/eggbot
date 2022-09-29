@@ -1,0 +1,11 @@
+{
+  "watch": ["out/"],
+  "ignore": ["src/", "node_modules"],
+  "ext": "js,json",
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "execMap": {
+    "js": "node"
+  }
+}

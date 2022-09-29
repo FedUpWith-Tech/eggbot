@@ -1,0 +1,49 @@
+{
+  "name": "eggbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "out/app.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "watch": "rollup -c rollup.config.js -w",
+    "run": "nodemon out/app.js",
+    "load-commands": "tsc && node out/modules/registerCommands.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FedUpWith-Tech/DynmapBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FedUpWith-Tech/DynmapBot/issues"
+  },
+  "homepage": "https://github.com/FedUpWith-Tech/DynmapBot#readme",
+  "dependencies": {
+    "discord-api-types": "^0.37.7",
+    "discord.js": "^14.3.0"
+  },
+  "devDependencies": {
+    "@open-wc/building-rollup": "^2.0.2",
+    "@rollup/plugin-node-resolve": "^14.0.1",
+    "@types/mysql": "^2.15.21",
+    "@rollup/plugin-typescript": "^8.5.0",
+    "@types/node": "^18.7.15",
+    "@types/ping": "^0.4.1",
+    "@typescript-eslint/eslint-plugin": ">=1.8.0",
+    "@typescript-eslint/parser": ">=1.8.0",
+    "eslint": "8.22.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-typescript": "3.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "nodemon": "^2.0.19",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.79.0",
+    "rollup-plugin-auto-external": "^2.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "*"
+  }
+}

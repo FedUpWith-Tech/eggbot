@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "esnext",
+    "outDir": "out",
+    "rootDir": "src",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "types": ["node"],
+    "lib": ["es6"],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowUnreachableCode": true,
+    "useUnknownInCatchVariables": false, // TypeScript 4.4+ only!
+    "sourceMap": true
+  },
+  "include": ["./src/**/*.ts", "./src/app.ts"],
+  "exclude": ["node_modules", "<node_internals>/**", "dist", "out"]
+}
